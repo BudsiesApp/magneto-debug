@@ -56,7 +56,7 @@ class Magneto_Debug_Block_Config extends Magneto_Debug_Block_Abstract
     public function getSearchConfigUrl()
     {
         return Mage::getUrl('debug/index/searchConfig', array(
-            '_store' => self::DEFAULT_STORE_ID,
+            '_store' => $this->currentStoreId,
             '_nosid' => true));
     }
 
