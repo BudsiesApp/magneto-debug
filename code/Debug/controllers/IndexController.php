@@ -170,7 +170,7 @@ class Magneto_Debug_IndexController extends Mage_Core_Controller_Front_Action
         
         $result = $readAdapter->fetchCol($select, $bind);
 
-        if (count($result)) {
+        if ($result && count($result)) {
             $handleFiles['DATABASE'] = array();
             foreach ($result as $dbLayoutUpdate){
                 $handleFiles['DATABASE'][] = new Varien_Simplexml_Element($dbLayoutUpdate);

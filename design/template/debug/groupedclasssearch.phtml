@@ -9,7 +9,7 @@
 	</thead>
     <tbody>
         <div id="class-search-results">
-        <?php if(count($items)): ?>
+        <?php if(is_array($items) && count($items)): ?>
             <?php $row = 0 ?>
             <?php foreach($items as $key=>$value): ?>
                 <tr>

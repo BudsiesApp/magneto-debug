@@ -83,7 +83,9 @@ class Magneto_Debug_Block_Debug extends Magneto_Debug_Block_Abstract
 	 
     protected function createBlocksPanel() {
         $title = 'Blocks';
-		$nBlocks = count(Mage::getSingleton('debug/observer')->getBlocks());
+        
+        $blocks = Mage::getSingleton('debug/observer')->getBlocks();
+		$nBlocks = $blocks ? count($blocks) : 0;
 		
         $panel = array(
             'title' => $title,
@@ -130,8 +132,14 @@ class Magneto_Debug_Block_Debug extends Magneto_Debug_Block_Abstract
 
     protected function createModelsPanel() {
         $title = 'Models';
-		$nModels = count(Mage::getSingleton('debug/observer')->getModels());
-		$nQueries = count(Mage::getSingleton('debug/observer')->getQueries());
+
+        $models = Mage::getSingleton('debug/observer')->getModels();
+        $queries = Mage::getSingleton('debug/observer')->getQueries();
+
+
+		$nModels = $models ? count($models) : 0;
+		$nQueries = $queries ? count($queries) : 0;
+
         $panel = array(
             'title' => $title,
             'has_content' => true,

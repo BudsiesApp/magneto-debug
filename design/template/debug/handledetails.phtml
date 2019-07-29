@@ -5,7 +5,7 @@
 
 <div class="djDebugPanelContent">
     <div class="scroll">
-        <h4><?php echo $this->__('Layout Updates For This Handle') ?> (<?php echo count($handleFiles); ?>)</h4>
+        <h4><?php echo $this->__('Layout Updates For This Handle') ?> (<?php echo is_array($handleFiles) ? count($handleFiles) : 0; ?>)</h4>
         <table>
             <thead>
                 <tr>

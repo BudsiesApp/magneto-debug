@@ -76,7 +76,7 @@ $queries = $this->getQueries();
 				<td class="syntax">
 					 <div class="djDebugSqlWrap">
                          <div class="djDebugSql"><?php echo $item->getQuery() ?>
-                             <?php if( count($item->getQueryParams()) ): ?>
+                             <?php if( is_array($item->getQueryParams()) && count($item->getQueryParams()) ): ?>
                                 <br/><strong>Params:</strong> <?php echo implode(', ', $item->getQueryParams()); ?>
                             <?php endif; ?>
                         </div>

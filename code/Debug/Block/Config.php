@@ -5,7 +5,7 @@ class Magneto_Debug_Block_Config extends Magneto_Debug_Block_Abstract
         if( !$xml )
             return;
 
-        if( count($xml->children())==0 ){
+        if( $xml->children() && count($xml->children())==0 ){
             $arr[$parentKey] = (string) $xml;
         } else {
             foreach( $xml->children() as $key => $item ){
