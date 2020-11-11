@@ -4,6 +4,6 @@
     "description": "Magento Debug Toolbar",
     "homepage": "https://github.com/madalinoprea/magneto-debug",
     "require": {
-        "magento-hackathon/magento-composer-installer": "dev-master"
+        "magento-hackathon/magento-composer-installer": "*"
     }
 }
